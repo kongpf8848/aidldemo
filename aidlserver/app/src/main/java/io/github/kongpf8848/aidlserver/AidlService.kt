@@ -31,8 +31,19 @@ class AidlService : Service() {
         @Throws(RemoteException::class)
         override fun sendData(pfd: ParcelFileDescriptor) {
             Log.d("JACK", "thread:" + Thread.currentThread().name + " sendData")
+            /**
+             * 从ParcelFileDescriptor中获取FileDescriptor
+             */
             val fileDescriptor = pfd.fileDescriptor
+
+            /**
+             * 根据FileDescriptor构建InputStream对象
+             */
             val fis = FileInputStream(fileDescriptor)
+
+            /**
+             * 从InputStream中读取字节数组
+             */
             val data = fis.readBytes()
             Log.d("JACK", "bytes size:${data.size}")
             val message = Message().apply {
