@@ -33,15 +33,13 @@ class AidlService : Service() {
             Log.d("JACK", "thread:" + Thread.currentThread().name + " sendData")
             val fileDescriptor = pfd.fileDescriptor
             val fis = FileInputStream(fileDescriptor)
-            val data = AssetUtils.openInputStream(applicationContext, fis)
-            if (data != null) {
-                Log.d("JACK", "bytes size:${data.size}")
-                val message = Message().apply {
-                    what = 1
-                    obj = data
-                }
-                MyApplication.application.handler.sendMessage(message)
+            val data = fis.readBytes()
+            Log.d("JACK", "bytes size:${data.size}")
+            val message = Message().apply {
+                what = 1
+                obj = data
             }
+            MyApplication.application.handler.sendMessage(message)
         }
 
         @Throws(RemoteException::class)

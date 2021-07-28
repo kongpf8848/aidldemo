@@ -4,10 +4,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
-import android.os.Bundle
-import android.os.IBinder
-import android.os.ParcelFileDescriptor
-import android.os.RemoteException
+import android.os.*
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -112,16 +109,41 @@ class MainActivity : AppCompatActivity() {
             return
         }
         try {
-            val byteArray = AssetUtils.openAssets(this, "large.jpg")
-            if (byteArray != null) {
-                val memoryFile= MemoryFileUtils.createMemoryFile("image", byteArray.size)
-                if(memoryFile!=null) {
-                    memoryFile.writeBytes(byteArray, 0, 0, byteArray.size)
-                    val fd=MemoryFileUtils.getFileDescriptor(memoryFile)
-                    val pfd= ParcelFileDescriptor.dup(fd)
-                    mStub?.sendData(pfd)
-                }
-            }
+            /**
+             * 读取assets目录下文件
+             */
+            val inputStream = assets.open("large.jpg")
+
+            /**
+             * 将inputStream转换成字节数组
+             */
+            val byteArray=inputStream.readBytes()
+
+            /**
+             * 创建MemoryFile
+             */
+            val memoryFile=MemoryFile("image", byteArray.size)
+
+            /**
+             * 向MemoryFile中写入字节数组
+             */
+            memoryFile.writeBytes(byteArray, 0, 0, byteArray.size)
+
+            /**
+             * 获取MemoryFile对应的FileDescriptor
+             */
+            val fd=MemoryFileUtils.getFileDescriptor(memoryFile)
+
+            /**
+             * 根据FileDescriptor创建ParcelFileDescriptor
+             */
+            val pfd= ParcelFileDescriptor.dup(fd)
+
+            /**
+             * 发送数据
+             */
+            mStub?.sendData(pfd)
+
         } catch (e: IOException) {
             e.printStackTrace()
         } catch (e: RemoteException) {
