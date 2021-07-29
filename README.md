@@ -1,11 +1,11 @@
 # aidldemo
-使用AIDL+共享内存实现跨进程大文件传输。
+**使用AIDL+共享内存实现跨进程大文件传输。**
 
 # AIDL简介
-AIDL是Android中实现跨进程通信(Inter-Process Communication)的一种方式。AIDL的传输数据机制基于Binder，Binder对传输数据大小有限制，
+```AIDL```是```Android```中实现跨进程通信(```Inter-Process Communication```)的一种方式。```AIDL```的传输数据机制基于```Binder```，```Binder```对传输数据大小有限制，
 传输超过1M的文件就会报```android.os.TransactionTooLargeException```异常，一种解决办法就是使用共享内存进行大文件传输。
 
-#AIDL大文件传输实战
+# AIDL大文件传输实战
 
 ## 定义AIDL接口
 ```java
@@ -16,7 +16,7 @@ interface IMyAidlInterface {
 }
 ```
 ## 服务端
-* 实现接口
+1. **实现```IMyAidlInterface```接口**
 ```kotlin
 //AidlService.kt
 class AidlService : Service() {
@@ -25,10 +25,7 @@ class AidlService : Service() {
 
         @Throws(RemoteException::class)
         override fun sendData(pfd: ParcelFileDescriptor) {
-            val fileDescriptor = pfd.fileDescriptor
-            val fis = FileInputStream(fileDescriptor)
-            val data = fis.readBytes()
-			......
+          
         }
     }
 
@@ -37,14 +34,38 @@ class AidlService : Service() {
     }
 }
 ``` 
+2. **接收数据**
+```kotlin
+@Throws(RemoteException::class)
+override fun sendData(pfd: ParcelFileDescriptor) {
+
+    /**
+     * 从ParcelFileDescriptor中获取FileDescriptor
+     */
+    val fileDescriptor = pfd.fileDescriptor
+
+    /**
+     * 根据FileDescriptor构建InputStream对象
+     */
+    val fis = FileInputStream(fileDescriptor)
+
+    /**
+     * 从InputStream中读取字节数组
+     */
+    val data = fis.readBytes()
+    
+    ......
+}
+
+```
 
 ## 客户端
-* 绑定服务
-* 在项目的 src/目录中加入.aidl文件
-* 声明一个IMyAidlInterface接口实例（基于AIDL生成）
-* 实现android.content.ServiceConnection接口
-* 调用Context.bindService()绑定服务，传入ServiceConnection实现实例
-* 在onServiceConnected()实现中，调用IMyAidlInterface.Stub.asInterface(binder)，将返回的参数转换为IMyAidlInterface类型 
+1. **绑定服务**
+    * 在项目的```src```目录中加入```.aidl```文件
+    * 声明一个```IMyAidlInterface```接口实例（基于```AIDL```生成）
+    * 创建```ServiceConnection```实例，实现```android.content.ServiceConnection```接口
+    * 调用```Context.bindService()```绑定服务，传入```ServiceConnection```实例
+    * 在```onServiceConnected()```实现中，调用```IMyAidlInterface.Stub.asInterface(binder)```，将返回参数转换为```IMyAidlInterface```类型 
 ```kotlin
 //MainActivity.kt
 class MainActivity : AppCompatActivity() {
@@ -96,58 +117,58 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```  
-* 发送数据
- * 将发送文件转换成字节数组
- * 创建MemoryFile
- * 向MemoryFile中写入字节数组
- * 获取MemoryFile对应的FileDescriptor
- * 根据FileDescriptor创建ParcelFileDescriptor
- * 发送ParcelFileDescriptor对象
+2. **发送数据**
+     * 将发送文件转换成字节数组```ByteArray```
+     * 创建```MemoryFile```对象
+     * 向```MemoryFile```对象中写入字节数组
+     * 获取```MemoryFile```对应的```FileDescriptor```
+     * 根据```FileDescriptor```创建```ParcelFileDescriptor```
+     * 调用IPC方法，发送```ParcelFileDescriptor```对象
 ```kotlin
 private fun sendLargeData() {
-	if (mStub == null) {
-		return
-	}
-	try {
-		/**
-		 * 读取assets目录下文件
-		 */
-		val inputStream = assets.open("large.jpg")
+   if (mStub == null) {
+      return
+   }
+   try {
+	/**
+	 * 读取assets目录下文件
+	 */
+	val inputStream = assets.open("large.jpg")
 
-		/**
-		 * 将inputStream转换成字节数组
-		 */
-		val byteArray=inputStream.readBytes()
+	/**
+	 * 将inputStream转换成字节数组
+	 */
+	val byteArray=inputStream.readBytes()
 
-		/**
-		 * 创建MemoryFile
-		 */
-		val memoryFile=MemoryFile("image", byteArray.size)
+	/**
+	 * 创建MemoryFile
+	 */
+	val memoryFile=MemoryFile("image", byteArray.size)
 
-		/**
-		 * 向MemoryFile中写入字节数组
-		 */
-		memoryFile.writeBytes(byteArray, 0, 0, byteArray.size)
+	/**
+	 * 向MemoryFile中写入字节数组
+	 */
+	memoryFile.writeBytes(byteArray, 0, 0, byteArray.size)
 
-		/**
-		 * 获取MemoryFile对应的FileDescriptor
-		 */
-		val fd=MemoryFileUtils.getFileDescriptor(memoryFile)
+	/**
+	 * 获取MemoryFile对应的FileDescriptor
+	 */
+	val fd=MemoryFileUtils.getFileDescriptor(memoryFile)
 
-		/**
-		 * 根据FileDescriptor创建ParcelFileDescriptor
-		 */
-		val pfd= ParcelFileDescriptor.dup(fd)
+	/**
+	 * 根据FileDescriptor创建ParcelFileDescriptor
+	 */
+	val pfd= ParcelFileDescriptor.dup(fd)
 
-		/**
-		 * 发送数据
-		 */
-		mStub?.sendData(pfd)
+	/**
+	 * 发送数据
+	 */
+	mStub?.sendData(pfd)
 
-	} catch (e: IOException) {
-		e.printStackTrace()
-	} catch (e: RemoteException) {
-		e.printStackTrace()
-	}
+    } catch (e: IOException) {
+	e.printStackTrace()
+    } catch (e: RemoteException) {
+	e.printStackTrace()
+    }
 }
 ```  
