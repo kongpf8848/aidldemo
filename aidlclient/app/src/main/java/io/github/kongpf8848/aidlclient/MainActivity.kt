@@ -4,23 +4,44 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
+import android.graphics.BitmapFactory
 import android.os.*
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import io.github.kongpf8848.aidlserver.Book
+import io.github.kongpf8848.aidlserver.ICallbackInterface
 import io.github.kongpf8848.aidlserver.IMyAidlInterface
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.FileInputStream
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 
     private var mStub: IMyAidlInterface? = null
+    private val callback=object: ICallbackInterface.Stub() {
+        override fun server2client(pfd: ParcelFileDescriptor) {
+            val fileDescriptor = pfd.fileDescriptor
+            val fis = FileInputStream(fileDescriptor)
+            val bytes = fis.readBytes()
+            if (bytes != null && bytes.isNotEmpty()) {
+                Log.d("JACK", "bytes size:${bytes.size},thread:${Thread.currentThread().name}")
+                val bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+                if (bitmap != null) {
+                    runOnUiThread{
+                        iv_pic.setImageBitmap(bitmap)
+                    }
 
+                }
+            }
+        }
+
+    }
     private val serviceConnection = object : ServiceConnection {
         override fun onServiceConnected(name: ComponentName, binder: IBinder) {
             Log.d("JACK", "onServiceConnected() called with: name = $name, binder = $binder")
             mStub = IMyAidlInterface.Stub.asInterface(binder)
+            mStub?.registerCallback(callback)
         }
 
         override fun onServiceDisconnected(name: ComponentName) {
@@ -32,36 +53,36 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        button1.setOnClickListener {
+        btn_bind_service.setOnClickListener {
             bindService()
         }
-        button2.setOnClickListener {
-            try {
-                mStub?.addBook(Book(1, "Network"))
-            } catch (e: RemoteException) {
-                e.printStackTrace()
-            }
-        }
-        button3.setOnClickListener {
-            try {
-                mStub?.addBook(Book(2, "Computer"))
-            } catch (e: RemoteException) {
-                e.printStackTrace()
-            }
-        }
-        button4.setOnClickListener {
-            try {
-                mStub?.bookList?.forEach {
-                    Log.d("JACK", "book:${it}")
-                }
-            } catch (e: RemoteException) {
-                e.printStackTrace()
-            }
-        }
-        button5.setOnClickListener {
-            sendSmallData()
-        }
-        button6.setOnClickListener {
+//        button2.setOnClickListener {
+//            try {
+//                mStub?.addBook(Book(1, "Network"))
+//            } catch (e: RemoteException) {
+//                e.printStackTrace()
+//            }
+//        }
+//        button3.setOnClickListener {
+//            try {
+//                mStub?.addBook(Book(2, "Computer"))
+//            } catch (e: RemoteException) {
+//                e.printStackTrace()
+//            }
+//        }
+//        button4.setOnClickListener {
+//            try {
+//                mStub?.bookList?.forEach {
+//                    Log.d("JACK", "book:${it}")
+//                }
+//            } catch (e: RemoteException) {
+//                e.printStackTrace()
+//            }
+//        }
+//        button5.setOnClickListener {
+//            sendSmallData()
+//        }
+        btn_send_to_server.setOnClickListener {
             sendLargeData()
         }
     }
@@ -122,7 +143,7 @@ class MainActivity : AppCompatActivity() {
             /**
              * 创建MemoryFile
              */
-            val memoryFile=MemoryFile("image", byteArray.size)
+            val memoryFile=MemoryFile("client_image", byteArray.size)
 
             /**
              * 向MemoryFile中写入字节数组
@@ -142,7 +163,7 @@ class MainActivity : AppCompatActivity() {
             /**
              * 发送数据
              */
-            mStub?.sendData(pfd)
+            mStub?.client2server(pfd)
 
         } catch (e: IOException) {
             e.printStackTrace()
@@ -153,6 +174,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         if(mStub!=null) {
+            mStub?.unregisterCallback(callback)
             unbindService(serviceConnection)
         }
         super.onDestroy()
