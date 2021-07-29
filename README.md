@@ -1,9 +1,22 @@
 # aidldemo
-**使用AIDL+共享内存实现跨进程大文件传输。**
+**使用AIDL+匿名共享内存实现跨进程大文件传输。**
+
+![](https://github.com/kongpf8848/aidldemo/blob/master/images/pipe.png)
 
 # AIDL简介
 ```AIDL```是```Android```中实现跨进程通信(```Inter-Process Communication```)的一种方式。```AIDL```的传输数据机制基于```Binder```，```Binder```对传输数据大小有限制，
 传输超过1M的文件就会报```android.os.TransactionTooLargeException```异常，一种解决办法就是使用共享内存进行大文件传输。
+
+# 共享内存简介
+共享内存是进程间通信的一种方式，通过映射一块公共内存到各自的进程空间来达到共享内存的目的。对于进程间需要传递大量数据的场景下，这种通信方式是十分高效的。
+
+![](https://github.com/kongpf8848/aidldemo/blob/master/images/shmem.png)
+
+```Android```中的匿名共享内存(Ashmem)是基于```Linux```共享内存的，借助```Binder```+文件描述符(```FileDescriptor```)实现了共享内存的传递。它可以让多个进程操作同一块内存区域，并且除了物理内存限制，没有其他大小限制。相对于```Linux```的共享内存，Ashmem对内存的管理更加精细化，并且添加了互斥锁。```Java```层在使用时需要用到```MemoryFile```，它封装了```native```代码。```Android```平台上共享内存通常的做法如下：
+* 进程A通过```MemoryFile```创建共享内存，得到fd(```FileDescriptor```)
+* 进程A通过fd将数据写入共享内存
+* 进程A将fd封装成实现```Parcelable```接口的```ParcelFileDescriptor```对象，通过```Binder```将```ParcelFileDescriptor```对象发送给进程B
+* 进程B获从```ParcelFileDescriptor```对象中获取fd，从fd中读取数据
 
 # AIDL大文件传输实战
 
@@ -123,7 +136,7 @@ class MainActivity : AppCompatActivity() {
      * 向```MemoryFile```对象中写入字节数组
      * 获取```MemoryFile```对应的```FileDescriptor```
      * 根据```FileDescriptor```创建```ParcelFileDescriptor```
-     * 调用IPC方法，发送```ParcelFileDescriptor```对象
+     * 调用```IPC```方法，发送```ParcelFileDescriptor```对象
 ```kotlin
 private fun sendLargeData() {
    if (mStub == null) {
