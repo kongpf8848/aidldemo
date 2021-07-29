@@ -18,7 +18,7 @@
         android:id="@+id/btn_send_to_client"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="服务端发送数据到客户端"
+        android:text="服务端发送大图片到客户端"
         android:textColor="#333333" />
 
 </LinearLayout>

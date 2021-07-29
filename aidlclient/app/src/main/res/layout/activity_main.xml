@@ -26,7 +26,7 @@
         android:id="@+id/btn_send_to_server"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="客户端发送数据到服务端"
+        android:text="客户端发送大图片到服务端"
         android:textColor="#333333" />
 
 
