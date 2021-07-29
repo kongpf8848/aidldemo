@@ -98,9 +98,9 @@ class MainActivity : AppCompatActivity() {
         try {
             val bindSucc = bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE)
             if (bindSucc) {
-                Toast.makeText(this, "bind Service OK", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "bind ok", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "bind Service FAIL", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "bind fail", Toast.LENGTH_SHORT).show()
             }
         } catch (e: Exception) {
             e.printStackTrace()
