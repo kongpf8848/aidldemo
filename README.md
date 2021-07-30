@@ -4,7 +4,7 @@
 ![demo.gif](https://github.com/kongpf8848/aidldemo/blob/master/images/demo.gif)
 
 # AIDL简介
-```AIDL```是```Android```中实现跨进程通信(```Inter-Process Communication```)的一种方式。[AIDL的简单使用请点这里](https://github.com/kongpf8848/aidldemo/blob/master/aidl.md),```AIDL```的传输数据机制基于```Binder```，```Binder```对传输数据大小有限制，
+```AIDL```是```Android```中实现跨进程通信(```Inter-Process Communication```)的一种方式。```AIDL```的传输数据机制基于```Binder```，```Binder```对传输数据大小有限制，
 传输超过1M的文件就会报```android.os.TransactionTooLargeException```异常，一种解决办法就是使用匿名共享内存进行大文件传输。
 
 ![](https://github.com/kongpf8848/aidldemo/blob/master/images/pipe.png)
@@ -280,5 +280,7 @@ private fun server2client(pfd:ParcelFileDescriptor){
 }
 ```
 至此，我们实现了客户端和服务端双向通信和传输大文件😉😉😉
-# 参考
-[AIDL官方文档](https://developer.android.google.cn/guide/components/aidl.html?hl=zh-cn)
+# 其他
+* [AIDL官方文档](https://developer.android.google.cn/guide/components/aidl.html?hl=zh-cn)
+
+* [AIDL使用文档](https://github.com/kongpf8848/aidldemo/blob/master/aidl.md)
