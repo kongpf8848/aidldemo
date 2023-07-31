@@ -4,6 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/aidlclient.iml" filepath="$PROJECT_DIR$/aidlclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aidlclient.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aidlclient.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aidlclient.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aidlclient.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aidlclient.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aidlclient.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aidlclient.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aidlclient.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aidldemo.aidlclient.iml" filepath="$PROJECT_DIR$/.idea/modules/aidldemo.aidlclient.iml" />
     </modules>
   </component>
 </project>

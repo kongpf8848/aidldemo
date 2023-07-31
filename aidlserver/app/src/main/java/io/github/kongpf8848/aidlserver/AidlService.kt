@@ -96,7 +96,7 @@ class AidlService : Service() {
         super.onCreate()
         Log.d("JACK", "onCreate")
         MyApplication.application.setOnSendClientDataCallback(object:MyApplication.OnSendClientDataCallback{
-            override fun onSendlientData(pfd: ParcelFileDescriptor) {
+            override fun onSendClientData(pfd: ParcelFileDescriptor) {
                 server2client(pfd)
             }
         })

@@ -26,7 +26,7 @@ class MyApplication : Application() {
                 }
                 2->{
                     val pfd=msg.obj as ParcelFileDescriptor
-                    sendDataCallback?.onSendlientData(pfd)
+                    sendDataCallback?.onSendClientData(pfd)
                 }
             }
         }
@@ -50,7 +50,7 @@ class MyApplication : Application() {
     }
 
     interface OnSendClientDataCallback {
-        fun onSendlientData(pfd: ParcelFileDescriptor)
+        fun onSendClientData(pfd: ParcelFileDescriptor)
     }
 
     companion object {
