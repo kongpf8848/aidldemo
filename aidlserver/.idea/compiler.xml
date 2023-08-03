@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.8">
+      <module name="aidldemo.aidlserver.app" target="17" />
       <module name="aidlserver.app" target="17" />
     </bytecodeTargetLevel>
   </component>

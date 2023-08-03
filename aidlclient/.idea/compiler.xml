@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.8">
       <module name="aidlclient.app" target="17" />
+      <module name="aidldemo.aidlclient.app" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

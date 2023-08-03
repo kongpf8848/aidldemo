@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GitHub.aidldemo.aidlserver.iml" filepath="$PROJECT_DIR$/.idea/modules/GitHub.aidldemo.aidlserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/aidldemo.aidlserver.iml" filepath="$PROJECT_DIR$/.idea/modules/aidldemo.aidlserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aidldemo.aidlserver.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aidldemo.aidlserver.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aidldemo.aidlserver.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aidldemo.aidlserver.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aidldemo.aidlserver.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aidldemo.aidlserver.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aidldemo.aidlserver.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aidldemo.aidlserver.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/aidlserver.iml" filepath="$PROJECT_DIR$/aidlserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aidlserver.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aidlserver.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aidlserver.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aidlserver.app.androidTest.iml" />
