@@ -113,8 +113,8 @@ class MainActivity : AppCompatActivity() {
         if (mStub != null) {
             return
         }
-        val intent = Intent("io.github.kongpf8848.aidlserver.AidlService")
-        intent.setClassName("io.github.kongpf8848.aidlserver","io.github.kongpf8848.aidlserver.AidlService")
+        val intent = Intent("com.example.aidl.server.AidlService")
+        intent.setClassName("com.example.aidl.server","com.example.aidl.server.AidlService")
 
         try {
             val bindSucc = bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE)
@@ -197,7 +197,7 @@ private fun sendLargeData() {
 * 定义监听回调接口
 ```java
 //ICallbackInterface.aidl
-package io.github.kongpf8848.aidlserver;
+package com.example.aidl.service;
 
 interface ICallbackInterface {
     void server2client(in ParcelFileDescriptor pfd);
@@ -206,7 +206,7 @@ interface ICallbackInterface {
 * 在```IMyAidlInterface.aidl```中添加注册回调和反注册回调方法，如下：
 ```java
 //IMyAidlInterface.aidl
-import io.github.kongpf8848.aidlserver.ICallbackInterface;
+import com.example.aidl.service.ICallbackInterface;
 
 interface IMyAidlInterface {
 

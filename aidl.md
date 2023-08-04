@@ -4,7 +4,7 @@
   必须使用 Java 编程语言构建.aidl文件。每个.aidl文件均须定义单个接口，并且只需要接口声明和方法签名。
   ```java
   // IMyAidlInterface.aidl
-  package io.github.kongpf8848.aidlserver;
+  package com.example.aidl.service;
 
   // Declare any non-default types here with import statements
 
@@ -98,14 +98,14 @@
    
    ```java
    //Book.aidl
-   package io.github.kongpf8848.aidlserver;
+   package com.example.aidl.service;
    parcelable Book;
    ```
    在IMyAidlInterface.aidl中使用Book类型
    ```java
    // IMyAidlInterface.aidl
-  package io.github.kongpf8848.aidlserver;
-  import io.github.kongpf8848.aidlserver.Book;
+  package com.example.aidl.service;
+  import com.example.aidl.service.Book;
 
   interface IMyAidlInterface {
 
@@ -122,7 +122,7 @@
 
    ```kotlin
    //AidlService.kt
-   package io.github.kongpf8848.aidlserver
+   package com.example.aidl.server
 
    import android.app.Service
    import android.content.Intent
@@ -188,8 +188,8 @@
 		 if (mStub != null) {
 		    return
 		 }
-		 val intent = Intent("io.github.kongpf8848.aidlserver.AidlService")
-		 intent.setClassName("io.github.kongpf8848.aidlserver","io.github.kongpf8848.aidlserver.AidlService")
+		 val intent = Intent("com.example.aidl.server.AidlService")
+		 intent.setClassName("com.example.aidl.server","com.example.aidl.server.AidlService")
 
 		 try {
 		     val bindSucc = bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE)

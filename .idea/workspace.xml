@@ -9,112 +9,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c866afb-8863-49bb-9edb-dfd3ea51248f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aidl.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="5c866afb-8863-49bb-9edb-dfd3ea51248f" name="Changes" comment="update code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/.idea/caches/build_file_checksums.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/aidl/io/github/kongpf8848/aidlserver/Book.aidl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/aidl/io/github/kongpf8848/aidlserver/ICallbackInterface.aidl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/aidl/io/github/kongpf8848/aidlserver/IMyAidlInterface.aidl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/assets/large.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/assets/small.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/java/io/github/kongpf8848/aidlclient/AssetUtils.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/java/io/github/kongpf8848/aidlclient/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/java/io/github/kongpf8848/aidlclient/MemoryFileUtils.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/java/io/github/kongpf8848/aidlclient/ReflectUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/java/io/github/kongpf8848/aidlserver/Book.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlclient/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/.idea/caches/build_file_checksums.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/aidl/io/github/kongpf8848/aidlserver/Book.aidl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/aidl/io/github/kongpf8848/aidlserver/ICallbackInterface.aidl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/aidl/io/github/kongpf8848/aidlserver/IMyAidlInterface.aidl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/assets/server1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/assets/server2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/assets/server3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/java/io/github/kongpf8848/aidlserver/AidlService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/java/io/github/kongpf8848/aidlserver/AssetUtils.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/java/io/github/kongpf8848/aidlserver/Book.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/java/io/github/kongpf8848/aidlserver/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/java/io/github/kongpf8848/aidlserver/MemoryFileUtils.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/java/io/github/kongpf8848/aidlserver/MyApplication.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/java/io/github/kongpf8848/aidlserver/ReflectUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidlserver/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl.md" beforeDir="false" afterPath="$PROJECT_DIR$/aidl.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -366,6 +264,14 @@
       <option name="presentableId" value="Default" />
       <updated>1690974405470</updated>
     </task>
+    <task id="LOCAL-00001" summary="update code">
+      <created>1691152505928</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1691152505928</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,5 +284,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update code" />
+    <option name="LAST_COMMIT_MESSAGE" value="update code" />
   </component>
 </project>
