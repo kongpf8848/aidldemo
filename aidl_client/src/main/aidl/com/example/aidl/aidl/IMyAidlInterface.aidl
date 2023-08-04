@@ -1,7 +1,7 @@
 // IMyAidlInterface.aidl
-package com.example.aidl.service;
-import com.example.aidl.service.Book;
-import com.example.aidl.service.ICallbackInterface;
+package com.example.aidl.aidl;
+import com.example.aidl.aidl.Book;
+import com.example.aidl.aidl.ICallbackInterface;
 
 interface IMyAidlInterface {
 

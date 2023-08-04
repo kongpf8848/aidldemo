@@ -9,8 +9,8 @@ import android.os.*
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.aidl.service.ICallbackInterface
-import com.example.aidl.service.IMyAidlInterface
+import com.example.aidl.aidl.ICallbackInterface
+import com.example.aidl.aidl.IMyAidlInterface
 import com.example.aidl.client.R
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.FileInputStream

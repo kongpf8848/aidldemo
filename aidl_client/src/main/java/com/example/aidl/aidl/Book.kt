@@ -1,4 +1,4 @@
-package com.example.aidl.service
+package com.example.aidl.aidl
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

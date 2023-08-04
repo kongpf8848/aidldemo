@@ -13,6 +13,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aidl.md" beforeDir="false" afterPath="$PROJECT_DIR$/aidl.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/aidl/com/example/aidl/service/Book.aidl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/aidl/com/example/aidl/service/ICallbackInterface.aidl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/aidl/com/example/aidl/service/IMyAidlInterface.aidl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/java/com/example/aidl/client/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/aidl_client/src/main/java/com/example/aidl/client/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/java/com/example/aidl/service/Book.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/aidl/com/example/aidl/service/Book.aidl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/aidl/com/example/aidl/service/ICallbackInterface.aidl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/aidl/com/example/aidl/service/IMyAidlInterface.aidl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/server/AidlService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/server/AidlService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/service/Book.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,20 +85,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "/Users/kongpf/Desktop/camera-ipc-sample/aidl_server/src/main/java/com/example/aidl/server",
-    "project.structure.last.edited": "SDK Location",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kongpf/Desktop/camera-ipc-sample/aidl_server/src/main/java/com/example/aidl/server&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDK Location&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Signing Configs" />
     <option name="LAST_EDITED_SIGNING_CONFIG" value="debug" />
@@ -271,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691152505928</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update code">
+      <created>1691152891282</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691152891282</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

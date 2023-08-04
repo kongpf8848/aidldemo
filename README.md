@@ -197,7 +197,7 @@ private fun sendLargeData() {
 * 定义监听回调接口
 ```java
 //ICallbackInterface.aidl
-package com.example.aidl.service;
+package com.example.aidl.aidl;
 
 interface ICallbackInterface {
     void server2client(in ParcelFileDescriptor pfd);
@@ -206,7 +206,7 @@ interface ICallbackInterface {
 * 在```IMyAidlInterface.aidl```中添加注册回调和反注册回调方法，如下：
 ```java
 //IMyAidlInterface.aidl
-import com.example.aidl.service.ICallbackInterface;
+import com.example.aidl.aidl.ICallbackInterface;
 
 interface IMyAidlInterface {
 

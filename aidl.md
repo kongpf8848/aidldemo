@@ -4,7 +4,7 @@
   必须使用 Java 编程语言构建.aidl文件。每个.aidl文件均须定义单个接口，并且只需要接口声明和方法签名。
   ```java
   // IMyAidlInterface.aidl
-  package com.example.aidl.service;
+  package com.example.aidl.aidl;
 
   // Declare any non-default types here with import statements
 
@@ -98,14 +98,14 @@
    
    ```java
    //Book.aidl
-   package com.example.aidl.service;
+   package com.example.aidl.aidl;
    parcelable Book;
    ```
    在IMyAidlInterface.aidl中使用Book类型
    ```java
    // IMyAidlInterface.aidl
-  package com.example.aidl.service;
-  import com.example.aidl.service.Book;
+  package com.example.aidl.aidl;
+  import com.example.aidl.aidl.Book;
 
   interface IMyAidlInterface {
 

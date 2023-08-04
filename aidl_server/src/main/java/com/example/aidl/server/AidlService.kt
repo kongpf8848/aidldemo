@@ -4,9 +4,9 @@ import android.app.Service
 import android.content.Intent
 import android.os.*
 import android.util.Log
-import com.example.aidl.service.Book
-import com.example.aidl.service.ICallbackInterface
-import com.example.aidl.service.IMyAidlInterface
+import com.example.aidl.aidl.Book
+import com.example.aidl.aidl.ICallbackInterface
+import com.example.aidl.aidl.IMyAidlInterface
 import java.io.FileInputStream
 import java.util.*
 
