@@ -10,9 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c866afb-8863-49bb-9edb-dfd3ea51248f" name="Changes" comment="update code">
-      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/java/com/example/aidl/aidl/Book.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/aidl/Book.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/server/AidlService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/server/AidlService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aidl_client/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,23 +38,7 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="camera-ipc-sample" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="camera-ipc-sample" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="camera-ipc-sample" type="f1a62948:ProjectNode" />
-                <item name="camera_client" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="camera-ipc-sample" type="f1a62948:ProjectNode" />
-                <item name="camera_client" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="aidl" type="f1a62948:ProjectNode" />
               </path>
             </expand>
             <select />
