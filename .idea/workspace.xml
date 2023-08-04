@@ -10,19 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c866afb-8863-49bb-9edb-dfd3ea51248f" name="Changes" comment="update code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl.md" beforeDir="false" afterPath="$PROJECT_DIR$/aidl.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/aidl/com/example/aidl/service/Book.aidl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/aidl/com/example/aidl/service/ICallbackInterface.aidl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/aidl/com/example/aidl/service/IMyAidlInterface.aidl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/java/com/example/aidl/client/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/aidl_client/src/main/java/com/example/aidl/client/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/java/com/example/aidl/service/Book.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/aidl/com/example/aidl/service/Book.aidl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/aidl/com/example/aidl/service/ICallbackInterface.aidl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/aidl/com/example/aidl/service/IMyAidlInterface.aidl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/java/com/example/aidl/aidl/Book.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/aidl/Book.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/server/AidlService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/server/AidlService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/service/Book.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +64,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -115,8 +112,11 @@
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.example.aidl.service" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.aidl.aidl" />
+    </key>
   </component>
-  <component name="RunManager" selected="Android App.aidl_server">
+  <component name="RunManager" selected="Android App.aidl_client">
     <configuration name="aidl_client" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="aidl.aidl_client.main" />
       <option name="DEPLOY" value="true" />
@@ -288,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691152891282</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update code">
+      <created>1691153622197</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691153622197</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
