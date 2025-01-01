@@ -11,13 +11,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.aidl.aidl.ICallbackInterface
 import com.example.aidl.aidl.IMyAidlInterface
-import com.example.aidl.client.R
-import kotlinx.android.synthetic.main.activity_main.*
 import java.io.FileInputStream
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 
+    private var btn_bind_service: View? = null
+    private var btn_send_to_server: View? = null
+    private var iv_pic: ImageView? = null
     private var mStub: IMyAidlInterface? = null
     private val callback=object: ICallbackInterface.Stub() {
         override fun server2client(pfd: ParcelFileDescriptor) {
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 val bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
                 if (bitmap != null) {
                     runOnUiThread{
-                        iv_pic.setImageBitmap(bitmap)
+                        iv_pic?.setImageBitmap(bitmap)
                     }
 
                 }
@@ -53,36 +54,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        btn_bind_service.setOnClickListener {
+        btn_bind_service = findViewById(R.id.btn_bind_service)
+        btn_send_to_server = findViewById(R.id.btn_send_to_server)
+        iv_pic = findViewById(R.id.iv_pic)
+        btn_bind_service?.setOnClickListener {
             bindService()
         }
-//        button2.setOnClickListener {
-//            try {
-//                mStub?.addBook(Book(1, "Network"))
-//            } catch (e: RemoteException) {
-//                e.printStackTrace()
-//            }
-//        }
-//        button3.setOnClickListener {
-//            try {
-//                mStub?.addBook(Book(2, "Computer"))
-//            } catch (e: RemoteException) {
-//                e.printStackTrace()
-//            }
-//        }
-//        button4.setOnClickListener {
-//            try {
-//                mStub?.bookList?.forEach {
-//                    Log.d("JACK", "book:${it}")
-//                }
-//            } catch (e: RemoteException) {
-//                e.printStackTrace()
-//            }
-//        }
-//        button5.setOnClickListener {
-//            sendSmallData()
-//        }
-        btn_send_to_server.setOnClickListener {
+        btn_send_to_server?.setOnClickListener {
             sendLargeData()
         }
     }

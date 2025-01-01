@@ -3,14 +3,17 @@ package com.example.aidl.server
 import android.graphics.BitmapFactory
 import android.os.*
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MyApplication.OnGetClientDataCallback {
+    private var btn_send_to_client: View? = null
+    private var iv_pic: ImageView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        btn_send_to_client = findViewById(R.id.btn_send_to_client)
+        iv_pic = findViewById(R.id.iv_pic)
         MyApplication.application.setOnGetClientDataCallback(this)
-        btn_send_to_client.setOnClickListener {
+        btn_send_to_client?.setOnClickListener {
             try {
                 val inputStream = assets.open("server1.jpg")
                 val byteArray=inputStream.readBytes()
@@ -33,7 +36,7 @@ class MainActivity : AppCompatActivity(), MyApplication.OnGetClientDataCallback 
         if (bytes != null && bytes.isNotEmpty()) {
             val bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
             if (bitmap != null) {
-                iv_pic.setImageBitmap(bitmap)
+                iv_pic?.setImageBitmap(bitmap)
             }
         }
     }
