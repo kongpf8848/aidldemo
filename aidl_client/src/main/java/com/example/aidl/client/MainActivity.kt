@@ -6,6 +6,8 @@ import android.content.Intent
 import android.content.ServiceConnection
 import android.graphics.BitmapFactory
 import android.os.*
+import android.view.View
+import android.widget.ImageView
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity

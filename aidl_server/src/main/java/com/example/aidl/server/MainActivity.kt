@@ -2,6 +2,8 @@ package com.example.aidl.server
 
 import android.graphics.BitmapFactory
 import android.os.*
+import android.view.View
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity(), MyApplication.OnGetClientDataCallback {
