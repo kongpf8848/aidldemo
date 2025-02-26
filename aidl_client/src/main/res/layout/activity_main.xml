@@ -33,6 +33,21 @@
                 android:layout_height="50dp"
                 android:text="客户端发送大图片到服务端"
                 android:textColor="#333333" />
+
+            <Button
+                android:id="@+id/btn_add_book"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:text="添加Book"
+                android:textColor="#333333" />
+
+            <Button
+                android:id="@+id/btn_get_book"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="获取Book列表"
+                android:textColor="#333333" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

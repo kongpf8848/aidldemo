@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.aidl.aidl.Book
 import com.example.aidl.aidl.ICallbackInterface
 import com.example.aidl.aidl.IMyAidlInterface
 import java.io.FileInputStream
@@ -20,9 +21,12 @@ class MainActivity : AppCompatActivity() {
 
     private var btn_bind_service: View? = null
     private var btn_send_to_server: View? = null
+    private var btn_add_book: View? = null
+    private var btn_get_book: View? = null
     private var iv_pic: ImageView? = null
     private var mStub: IMyAidlInterface? = null
-    private val callback=object: ICallbackInterface.Stub() {
+    private var index = 0;
+    private val callback = object : ICallbackInterface.Stub() {
         override fun server2client(pfd: ParcelFileDescriptor) {
             val fileDescriptor = pfd.fileDescriptor
             val fis = FileInputStream(fileDescriptor)
@@ -31,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("JACK", "bytes size:${bytes.size},thread:${Thread.currentThread().name}")
                 val bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
                 if (bitmap != null) {
-                    runOnUiThread{
+                    runOnUiThread {
                         iv_pic?.setImageBitmap(bitmap)
                     }
 
@@ -58,12 +62,29 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         btn_bind_service = findViewById(R.id.btn_bind_service)
         btn_send_to_server = findViewById(R.id.btn_send_to_server)
+        btn_add_book = findViewById(R.id.btn_add_book)
+        btn_get_book = findViewById(R.id.btn_get_book)
         iv_pic = findViewById(R.id.iv_pic)
         btn_bind_service?.setOnClickListener {
             bindService()
         }
         btn_send_to_server?.setOnClickListener {
             sendLargeData()
+        }
+        btn_add_book?.setOnClickListener {
+            when (index) {
+                0 -> mStub?.addBook(Book(0, "Python编程"))
+                1 -> mStub?.addBook(Book(1, "C++编程"))
+                2 -> mStub?.addBook(Book(2, "Java编程"))
+            }
+            if (index < 2) {
+                index++
+            }
+        }
+        btn_get_book?.setOnClickListener {
+            mStub?.bookList?.forEach {
+                Log.d("JACK", "book:${it}")
+            }
         }
     }
 
@@ -73,7 +94,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
         val intent = Intent("com.example.aidl.server.AidlService")
-        intent.setClassName("com.example.aidl.server","com.example.aidl.server.AidlService")
+        intent.setClassName("com.example.aidl.server", "com.example.aidl.server.AidlService")
 
         try {
             val bindSucc = bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE)
@@ -94,14 +115,14 @@ class MainActivity : AppCompatActivity() {
         try {
             val byteArray = AssetUtils.openAssets(this, "small.jpg")
             if (byteArray != null) {
-               mStub?.sendImage(byteArray)
+                mStub?.sendImage(byteArray)
             }
         } catch (e: IOException) {
             e.printStackTrace()
-            Log.e("JACK","error:${e.message}")
+            Log.e("JACK", "error:${e.message}")
         } catch (e: RemoteException) {
             e.printStackTrace()
-            Log.e("JACK","error:${e.message}")
+            Log.e("JACK", "error:${e.message}")
         }
     }
 
@@ -118,12 +139,12 @@ class MainActivity : AppCompatActivity() {
             /**
              * 将inputStream转换成字节数组
              */
-            val byteArray=inputStream.readBytes()
+            val byteArray = inputStream.readBytes()
 
             /**
              * 创建MemoryFile
              */
-            val memoryFile=MemoryFile("client_image", byteArray.size)
+            val memoryFile = MemoryFile("client_image", byteArray.size)
 
             /**
              * 向MemoryFile中写入字节数组
@@ -133,12 +154,12 @@ class MainActivity : AppCompatActivity() {
             /**
              * 获取MemoryFile对应的FileDescriptor
              */
-            val fd= MemoryFileUtils.getFileDescriptor(memoryFile)
+            val fd = MemoryFileUtils.getFileDescriptor(memoryFile)
 
             /**
              * 根据FileDescriptor创建ParcelFileDescriptor
              */
-            val pfd= ParcelFileDescriptor.dup(fd)
+            val pfd = ParcelFileDescriptor.dup(fd)
 
             /**
              * 发送数据
@@ -153,7 +174,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
-        if(mStub!=null) {
+        if (mStub != null) {
             mStub?.unregisterCallback(callback)
             unbindService(serviceConnection)
         }
