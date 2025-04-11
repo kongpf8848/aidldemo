@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private var iv_pic: ImageView? = null
     private var mStub: IMyAidlInterface? = null
     private var index = 0;
+    private val bookList = listOf("Python编程", "C++编程", "Java编程", "计算机网络")
     private val callback = object : ICallbackInterface.Stub() {
         override fun server2client(pfd: ParcelFileDescriptor) {
             val fileDescriptor = pfd.fileDescriptor
@@ -72,13 +73,9 @@ class MainActivity : AppCompatActivity() {
             sendLargeData()
         }
         btn_add_book?.setOnClickListener {
-            when (index) {
-                0 -> mStub?.addBook(Book(0, "Python编程"))
-                1 -> mStub?.addBook(Book(1, "C++编程"))
-                2 -> mStub?.addBook(Book(2, "Java编程"))
-            }
-            if (index < 2) {
-                index++
+            val index = (Math.random() * bookList.size).toInt()
+            if (index < bookList.size) {
+                mStub?.addBook(Book(index, bookList[index]))
             }
         }
         btn_get_book?.setOnClickListener {
