@@ -17,17 +17,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c866afb-8863-49bb-9edb-dfd3ea51248f" name="Changes" comment="update code">
-      <change afterPath="$PROJECT_DIR$/aidl_client/src/main/java/com/example/aidl/aidl/Book.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/aidl/Book.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/aidl_client/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/java/com/example/aidl/aidl/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/java/com/example/aidl/client/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/aidl_client/src/main/java/com/example/aidl/client/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aidl_client/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/aidl_server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/aidl/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/server/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/aidl_server/src/main/java/com/example/aidl/server/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aidl_client/src/main/aidl/com/example/aidl/aidl/IMyAidlInterface.aidl" beforeDir="false" afterPath="$PROJECT_DIR$/aidl_client/src/main/aidl/com/example/aidl/aidl/IMyAidlInterface.aidl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +62,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kongpf8848&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kongpf8848/aidldemo&quot;,
+    &quot;accountId&quot;: &quot;c0a3ac74-8927-470b-9bdf-cd31d6571227&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -82,27 +85,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Android App.aidl_client.executor": "Run",
-    "Android App.aidl_server.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/kongpengfei/Desktop/jack/workspace/Github/aidldemo",
-    "project.structure.last.edited": "SDK Location",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Android App.aidl_client.executor&quot;: &quot;Run&quot;,
+    &quot;Android App.aidl_server.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kongpengfei/Desktop/jack/workspace/Github/aidldemo&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDK Location&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Signing Configs" />
     <option name="LAST_EDITED_SIGNING_CONFIG" value="debug" />
@@ -123,7 +126,7 @@
       <recent name="com.example.aidl.aidl" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.aidl_server">
+  <component name="RunManager" selected="Android App.aidl_client">
     <configuration name="aidl_client" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="aidl.aidl_client" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
@@ -352,12 +355,22 @@
       <map>
         <entry key="com.example.aidl.client">
           <value>
-            <CheckInfo lastCheckTimestamp="1740539592761" />
+            <CheckInfo lastCheckTimestamp="1745047445735" />
           </value>
         </entry>
         <entry key="com.example.aidl.client.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1740539592761" />
+            <CheckInfo lastCheckTimestamp="1745047445735" />
+          </value>
+        </entry>
+        <entry key="com.example.aidl.server">
+          <value>
+            <CheckInfo lastCheckTimestamp="1745046777114" />
+          </value>
+        </entry>
+        <entry key="com.example.aidl.server.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1745046777114" />
           </value>
         </entry>
       </map>
