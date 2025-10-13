@@ -1,4 +1,4 @@
-package com.example.aidl.client
+package com.example.aidl.client.utils
 
 import android.content.Context
 import java.io.ByteArrayOutputStream

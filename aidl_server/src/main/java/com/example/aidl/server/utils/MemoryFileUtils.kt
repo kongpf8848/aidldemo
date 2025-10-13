@@ -1,4 +1,4 @@
-package com.example.aidl.client
+package com.example.aidl.server.utils
 
 import android.os.MemoryFile
 import java.io.FileDescriptor

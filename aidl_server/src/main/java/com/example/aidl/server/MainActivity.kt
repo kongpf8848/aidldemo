@@ -1,11 +1,11 @@
 package com.example.aidl.server
 
-import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.*
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.aidl.server.utils.MemoryFileUtils
 
 class MainActivity : AppCompatActivity(), MyApplication.OnGetClientDataCallback {
     private var btn_send_to_client: View? = null

@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-parcelize'
+
 
 android {
     namespace 'com.example.aidl.server'
@@ -20,10 +20,6 @@ android {
         }
     }
 
-    buildFeatures {
-        aidl true
-    }
-
     kotlinOptions {
         jvmTarget = "17"
     }
@@ -37,6 +33,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation "junit:junit:4.12"
+    implementation project(':aidl')
     implementation "androidx.appcompat:appcompat:1.6.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.21"
 }

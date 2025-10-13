@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.aidl.aidl.Book
 import com.example.aidl.aidl.ICallbackInterface
 import com.example.aidl.aidl.IMyAidlInterface
+import com.example.aidl.client.utils.AssetUtils
+import com.example.aidl.client.utils.MemoryFileUtils
 import java.io.FileInputStream
 import java.io.IOException
 

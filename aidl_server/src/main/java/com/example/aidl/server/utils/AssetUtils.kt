@@ -1,4 +1,4 @@
-package com.example.aidl.server
+package com.example.aidl.server.utils
 
 import android.content.Context
 import java.io.ByteArrayOutputStream

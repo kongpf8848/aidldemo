@@ -1,4 +1,4 @@
-package com.example.aidl.client;
+package com.example.aidl.server.utils;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

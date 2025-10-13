@@ -1,4 +1,4 @@
-rootProject.name = "aidl"
+rootProject.name = "aidldemo"
+include ':aidl'
 include ':aidl_client'
 include ':aidl_server'
-
